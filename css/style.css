@@ -611,6 +611,13 @@ main .section___text .section___btns button {
   cursor: pointer;
 }
 
+@media (max-width: 650px) {
+  main .section___text .section___btns button {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+}
+
 main .section___text .section___btns button:hover {
   background-color: #333;
 }
@@ -711,6 +718,13 @@ section.weekly .section___text .section___btns button {
   cursor: pointer;
 }
 
+@media (max-width: 650px) {
+  section.weekly .section___text .section___btns button {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+}
+
 section.weekly .section___text .section___btns button:hover {
   background-color: #333;
 }
@@ -806,6 +820,13 @@ section.trending .trending___container .trending___item .trending___text button 
   color: #000;
 }
 
+@media (max-width: 650px) {
+  section.trending .trending___container .trending___item .trending___text button {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+}
+
 section.trending .trending___container .trending___item .trending___text button:hover {
   opacity: 0.6;
 }
@@ -856,8 +877,8 @@ section.fs .fs___container::-webkit-scrollbar-thumb {
 
 @media (max-width: 650px) {
   section.fs .fs___container {
-    -ms-grid-columns: (minmax(350px, auto))[9];
-        grid-template-columns: repeat(9, minmax(350px, auto));
+    -ms-grid-columns: (minmax(300px, auto))[9];
+        grid-template-columns: repeat(9, minmax(300px, auto));
   }
 }
 
@@ -952,8 +973,8 @@ section.apparel .apparel___container::-webkit-scrollbar-thumb {
 
 @media (max-width: 650px) {
   section.apparel .apparel___container {
-    -ms-grid-columns: (minmax(350px, auto))[3];
-        grid-template-columns: repeat(3, minmax(350px, auto));
+    -ms-grid-columns: (minmax(300px, auto))[3];
+        grid-template-columns: repeat(3, minmax(300px, auto));
   }
 }
 

@@ -401,7 +401,7 @@ section.fs {
         gap: 20px;
         grid-template-columns: repeat(9, minmax(33%, auto));
         @media (max-width: 650px) {
-            grid-template-columns: repeat(9, minmax(350px, auto));
+            grid-template-columns: repeat(9, minmax(300px, auto));
         }
         .fs___item {
             display: flex;
@@ -442,7 +442,7 @@ section.apparel {
             grid-template-columns: repeat(3, minmax(40%, auto));
         }
         @media (max-width: 650px) {
-            grid-template-columns: repeat(3, minmax(350px, auto));
+            grid-template-columns: repeat(3, minmax(300px, auto));
         }
         .apparel___item {
             position: relative;
