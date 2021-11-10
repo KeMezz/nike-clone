@@ -456,6 +456,9 @@ section.apparel {
                 position: absolute;
                 bottom: 30px;
                 left: 50px;
+                @media (max-width: 650px) {
+                    left: 30px;
+                }
                 h5 {
                     color: #fff;
                     font-size: 22px;

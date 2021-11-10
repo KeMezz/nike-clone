@@ -997,6 +997,12 @@ section.apparel .apparel___container .apparel___item .apparel___text {
   left: 50px;
 }
 
+@media (max-width: 650px) {
+  section.apparel .apparel___container .apparel___item .apparel___text {
+    left: 30px;
+  }
+}
+
 section.apparel .apparel___container .apparel___item .apparel___text h5 {
   color: #fff;
   font-size: 22px;
