@@ -1,0 +1,129 @@
+@import "_variables";
+
+@mixin defaultPadding {
+    padding-left: 50px;
+    padding-right: 50px;
+    @media (max-width: 1100px) {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+}
+
+@mixin defaultMargin {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin flexCenterAll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin containerDefaults {
+    @include defaultPadding;
+    @include defaultMargin;
+    font-family: $mainFonts;
+    font-family: $engFonts;
+    max-width: $maxWidth;
+}
+
+@mixin headerDefaults {
+    display: flex;
+    align-items: center;
+    font-family: $mainFonts;
+}
+
+@mixin sectionButton {
+    font-size: 16px;
+    font-weight: 350;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 26px;
+    cursor: pointer;
+}
+
+@mixin h1 {
+    font-size: 46px;
+    font-weight: bold;
+    line-height: 1.5;
+    word-break: keep-all;
+    @media (max-width: 650px) {
+        font-size: 30px;
+    }
+}
+
+@mixin sectionHeading {
+    .section___heading {
+        padding: 20px 10px;
+        font-size: 22px;
+        font-weight: 500;
+    }
+}
+
+@mixin sectionDefaults {
+    @include sectionHeading;
+    .section___visual {
+        object-fit: cover;
+        width: 100%;
+    }
+    .section___text {
+        padding: 50px 0;
+        text-align: center;
+        @media (max-width: 650px) {
+            padding: 30px 20px;
+            text-align: left;
+        }
+        h1 {
+            @include h1;
+            text-transform: uppercase;
+            padding-bottom: 20px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            padding-bottom: 20px;
+            word-break: keep-all;
+        }
+        .section___btns {
+            @include flexCenterAll;
+            gap: 10px;
+            @media (max-width: 650px) {
+                justify-content: flex-start;
+            }
+            button {
+                @include sectionButton;
+                &:hover {
+                    background-color: #333;
+                }
+            }
+        }
+    }
+}
+
+// @mixin bgImageDefaults ($pbValue) {
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     padding-bottom: ($pbValue);
+//     position: relative;
+//     cursor: pointer;
+// }
+
+@mixin scrollableX {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+@mixin beautyScroll {
+    &::-webkit-scrollbar {
+        height: 3px;
+        background-color: #f4f4f4;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #888;
+    }
+}
