@@ -19,16 +19,177 @@ a {
   padding-top: 40px;
 }
 
+.red {
+  color: red;
+}
+
 .overlay.active {
-  z-index: 1;
+  display: none;
+  z-index: 100;
   position: fixed;
-  top: 98px;
+  top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.5);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.sidemenu {
+  font-family: "Noto Sans KR", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 320px;
+  height: 100vh;
+  background-color: #fff;
+  right: -320px;
+  position: fixed;
+  z-index: 1000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media (min-width: 1100px) {
+  .sidemenu {
+    display: none;
+  }
+}
+
+.sidemenu .side___2 {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  background-color: red;
+  width: 320px;
+  height: 100vh;
+}
+
+.sidemenu .side___3 {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 320px;
+  height: 100vh;
+  top: 0;
+  right: -640px;
+  background-color: blue;
+}
+
+.sidemenu .sidemenu___wrapper {
+  padding: 36px;
+  line-height: 2;
+}
+
+.sidemenu .sidemenu___wrapper .sidemenu___nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.sidemenu .sidemenu___wrapper .sidemenu___brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px 0;
+  gap: 10px;
+}
+
+.sidemenu .sidemenu___wrapper .sidemenu___brand .brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.sidemenu .sidemenu___wrapper .sidemenu___members {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 1.5;
+  font-size: 14px;
+  padding: 50px 0;
+  color: #888;
+}
+
+.sidemenu .sidemenu___wrapper .sidemenu___members .members___buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.sidemenu .sidemenu___wrapper .sidemenu___members .members___buttons button {
+  font-size: 16px;
+  font-weight: 350;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 26px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+@media (max-width: 650px) {
+  .sidemenu .sidemenu___wrapper .sidemenu___members .members___buttons button {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+}
+
+.sidemenu .sidemenu___wrapper .sidemenu___members .members___buttons button:last-child {
+  background-color: #fff;
+  color: #000;
+  border: solid 1px #888;
+}
+
+.sidemenu .sidemenu___wrapper .sidemenu___customer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.sidemenu .sidemenu___wrapper .sidemenu___customer a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.sidemenu .sidemenu___wrapper .sidemenu___customer a i {
+  font-size: 26px;
 }
 
 .search___ui {
@@ -316,6 +477,12 @@ header.active {
   height: inherit;
 }
 
+@media (max-width: 1100px) {
+  .header___wrapper .header___nav {
+    display: none;
+  }
+}
+
 .header___wrapper .header___nav .nav___ul {
   font-family: "Open Sans", sans-serif;
   display: -webkit-box;
@@ -334,12 +501,6 @@ header.active {
   line-height: 60px;
   position: relative;
   padding: 0 16px;
-}
-
-@media (max-width: 1100px) {
-  .header___wrapper .header___nav .nav___ul .ul___title {
-    display: none;
-  }
 }
 
 .header___wrapper .header___nav .nav___ul .ul___title::after {

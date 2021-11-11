@@ -19,6 +19,7 @@ window.addEventListener("scroll", fixHeader);
 const mainmenuList = document.querySelectorAll(".nav___ul");
 const submenuWrapper = document.querySelectorAll(".submenu___wrapper");
 const submenuList = document.querySelectorAll(".submenu___list");
+const overlay = document.querySelector(".overlay");
 
 for (let i=0; i<mainmenuList.length; i++) {
     mainmenuList[i].addEventListener("mouseover", function() {
@@ -48,3 +49,20 @@ const searchClose = () => {
 searchbar.addEventListener("click", searchbarClicked);
 searchIcon.addEventListener("click", searchbarClicked);
 searchCloseBtn.addEventListener("click", searchClose);
+
+// 사이드메뉴 열기
+const sidemenu = document.querySelector(".sidemenu");
+const menuIcon = document.querySelector(".header___menu");
+
+const openMenu = () => {
+    overlay.style.display = "block";
+    sidemenu.style.right = "0";
+}
+
+const closeMenu = () => {
+    overlay.style.display = "none";
+    sidemenu.style.right = "-320px";
+}
+
+menuIcon.addEventListener("click", openMenu);
+overlay.addEventListener("click", closeMenu);

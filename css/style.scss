@@ -21,15 +21,108 @@ a {
     padding-top: 40px;
 }
 
+.red {
+    color: red;
+}
+
 .overlay.active {
-    z-index: 1;
+    display: none;
+    z-index: 100;
     position: fixed;
-    top: 98px;
+    top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(255,255,255,0.5);
-    backdrop-filter: blur(20px);
+    background-color: rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+}
+
+.sidemenu {
+    font-family: $mainFonts;
+    display: flex;
+    width: 320px;
+    height: 100vh;
+    background-color: #fff;
+    right: -320px;
+    position: fixed;
+    z-index: 1000;
+    transition: 0.3s;
+    @media (min-width: 1100px) {
+        display: none;
+    }
+    .side___2 {
+        position: fixed;
+        top: 0;
+        right: -320px;
+        background-color: red;
+        width: 320px;
+        height: 100vh;
+    }
+    .side___3 {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+        height: 100vh;
+        top: 0;
+        right: -640px;
+        background-color: blue;
+    }
+    .sidemenu___wrapper {
+        padding: 36px;
+        line-height: 2;
+        .sidemenu___nav {
+            display: flex;
+            flex-direction: column;
+            font-size: 24px;
+            font-weight: 500;
+        }
+        .sidemenu___brand {
+            display: flex;
+            flex-direction: column;
+            padding: 30px 0;
+            gap: 10px;
+            .brand {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+        }
+        .sidemenu___members {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.5;
+            font-size: 14px;
+            padding: 50px 0;
+            color: #888;
+            .members___buttons {
+                display: flex;
+                gap: 10px;
+                button {
+                    @include sectionButton;
+                    margin-top: 30px;
+                    &:last-child {
+                        background-color: #fff;
+                        color: #000;
+                        border: solid 1px #888;
+                    }
+                }
+            }
+        }
+        .sidemenu___customer {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            a {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                i {
+                    font-size: 26px;
+                }
+            }
+        }
+    }
 }
 
 .search___ui {
@@ -193,6 +286,9 @@ header.active {
         display: flex;
         align-items: center;
         height: inherit;
+        @media (max-width: 1100px) {
+            display: none;
+        }
         .nav___ul {
             font-family: $engFonts;
             display: flex;
@@ -208,9 +304,6 @@ header.active {
                 line-height: 60px;
                 position: relative;
                 padding: 0 16px;
-                @media (max-width: 1100px) {
-                    display: none;
-                }
                 &::after {
                     content: "";
                     transition: 0.3s;
