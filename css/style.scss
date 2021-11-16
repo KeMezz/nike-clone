@@ -25,11 +25,16 @@ a {
     color: red;
 }
 
-.overlay.active {
+.stop-scrolling { 
+    height: 100%; 
+    overflow: hidden; 
+  } 
+
+.overlay {
     display: none;
     z-index: 100;
     position: fixed;
-    top: 0;
+    // top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
@@ -52,7 +57,7 @@ a {
     }
     .side___2 {
         position: fixed;
-        top: 0;
+        // top: 0;
         right: -320px;
         background-color: red;
         width: 320px;
@@ -64,7 +69,7 @@ a {
         flex-direction: column;
         width: 320px;
         height: 100vh;
-        top: 0;
+        // top: 0;
         right: -640px;
         background-color: blue;
     }

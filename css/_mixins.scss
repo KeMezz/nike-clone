@@ -34,7 +34,7 @@
     font-family: $mainFonts;
 }
 
-@mixin sectionButton {
+@mixin sectionButton() {
     font-size: 16px;
     font-weight: 350;
     color: #fff;

@@ -40,15 +40,18 @@ const searchCloseBtn = document.querySelector(".search___close");
 
 const searchbarClicked = () => {
     searchUI.classList.add(ACTIVE_KEY);
+    overlay.style.display = "block";
 }
 
 const searchClose = () => {
     searchUI.classList.remove(ACTIVE_KEY);
+    overlay.style.display = "none";
 }
 
 searchbar.addEventListener("click", searchbarClicked);
 searchIcon.addEventListener("click", searchbarClicked);
 searchCloseBtn.addEventListener("click", searchClose);
+overlay.addEventListener("click", searchClose);
 
 // 사이드메뉴 열기
 const sidemenu = document.querySelector(".sidemenu");
@@ -57,11 +60,13 @@ const menuIcon = document.querySelector(".header___menu");
 const openMenu = () => {
     overlay.style.display = "block";
     sidemenu.style.right = "0";
+    document.body.classList.add("stop-scrolling"); 
 }
 
 const closeMenu = () => {
     overlay.style.display = "none";
     sidemenu.style.right = "-320px";
+    document.body.classList.remove("stop-scrolling"); 
 }
 
 menuIcon.addEventListener("click", openMenu);
