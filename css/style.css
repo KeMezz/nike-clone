@@ -48,6 +48,7 @@ a {
   width: 320px;
   height: 100vh;
   background-color: #fff;
+  top: 0;
   right: -320px;
   position: fixed;
   z-index: 1000;
@@ -59,29 +60,6 @@ a {
   .sidemenu {
     display: none;
   }
-}
-
-.sidemenu .side___2 {
-  position: fixed;
-  right: -320px;
-  background-color: red;
-  width: 320px;
-  height: 100vh;
-}
-
-.sidemenu .side___3 {
-  position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 320px;
-  height: 100vh;
-  right: -640px;
-  background-color: blue;
 }
 
 .sidemenu .sidemenu___wrapper {

@@ -1,6 +1,6 @@
 const ACTIVE_KEY = "active";
 
-// 스크롤에 따른 헤더 고정
+// 헤더 고정
 const header = document.querySelector("header");
 
 const fixHeader = () => {
@@ -32,6 +32,7 @@ for (let i=0; i<mainmenuList.length; i++) {
     })
 }
 
+
 // 검색 메뉴 열기
 const searchbar = document.querySelector(".header___searchbar");
 const searchIcon = document.querySelector(".header___search");
@@ -52,6 +53,7 @@ searchbar.addEventListener("click", searchbarClicked);
 searchIcon.addEventListener("click", searchbarClicked);
 searchCloseBtn.addEventListener("click", searchClose);
 overlay.addEventListener("click", searchClose);
+
 
 // 사이드메뉴 열기
 const sidemenu = document.querySelector(".sidemenu");
