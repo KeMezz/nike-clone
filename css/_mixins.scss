@@ -107,15 +107,6 @@
     }
 }
 
-// @mixin bgImageDefaults ($pbValue) {
-//     background-size: cover;
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     padding-bottom: ($pbValue);
-//     position: relative;
-//     cursor: pointer;
-// }
-
 @mixin scrollableX {
     overflow-x: auto;
     overflow-y: hidden;
